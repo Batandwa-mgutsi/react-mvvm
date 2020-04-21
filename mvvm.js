@@ -12,7 +12,7 @@ var React = require('react');
  * Views register callbacks to the view model and will be be notified when notifyListeners is called.
  * Generally, only one view should use a viewmodel.
  */
-class BaseViewModel {
+export class BaseViewModel {
   constructor() {
     this._listeners = [];
     this._busy = false;
@@ -63,7 +63,7 @@ class BaseViewModel {
 /**
  * A react component that subscribes to the given view model.
  */
-class ViewModelConsumer extends React.Component {
+export class ViewModelConsumer extends React.Component {
 
   /**
    * @param {BaseViewModel} viewModel is the view model to subscribe to.
