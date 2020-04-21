@@ -9,6 +9,23 @@ var React = require('react');
 class BaseViewModel {
   constructor() {
     this._listeners = [];
+    this._busy = false;
+  }
+
+  /**
+   * Set the view model as busy.
+   * 
+   * @param {boolean} isBusy is the status
+   */
+  setBusy(isBusy) {
+    this._busy = isBusy;
+  }
+
+  /**
+   * Is the view model busy.
+   */
+  isBusy() {
+    return this._busy;
   }
 
   /**
